@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Responsive Dashboard Design #1 | AsmrProg</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="/images/logo.png">
+                    <h2 class="success">EUB<span class="danger">Power</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/admin/viewer_dashboard.html">
+                    <span class="material-icons-sharp">
+                        devices_other
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="/Viewer/viewer_devices.html" class="active">
+                    <span class="material-icons-sharp">
+                        sensors
+                    </span>
+                    <h3>Devices</h3>
+                </a>
+
+
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        engineering
+                    </span>
+                    <h3>Line Man</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="pages/settings.html">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- New Users Section -->
+            <div class="recent-orders">
+                <h2>Device Status</h2>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Device ID</th>
+                      <th>Status</th>
+                      <th>Last Communication</th>
+                    </tr>
+                  </thead>
+                  <tbody id="deviceTableBody">
+                    <!-- Devices populated here -->
+                  </tbody>
+                </table>
+            </div>
+            <!-- End of New Users Section -->
+
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2>Relay Status</h2>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Relay UID</th>
+                      <th>Device ID</th>
+                      <th>GPIO Pin</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="relayTableBody">
+                    <!-- Relays populated here -->
+                  </tbody>
+                </table>
+            </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Reza</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/images/profile-1.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script src="../js/devices.js"></script>
+    <script src="../js/relay.js"></script>
+
+</body>
+
+</html>

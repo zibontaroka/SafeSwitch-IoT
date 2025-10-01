@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Z-LM2596S-BUCK")(type "KiCad")(uri "C:/Users/Hp/Desktop/GridAppPCB/footprint/Z-LM2596S-Buck/Z-LM2596S-BUCK.pretty")(options "")(descr ""))
+)

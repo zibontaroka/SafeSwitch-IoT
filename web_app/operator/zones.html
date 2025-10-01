@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Zones Management</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="/images/logo.png">
+                    <h2 class="success">EUB<span class="danger">Power</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="/operator/operator_dashboard.html">
+                    <span class="icon-wrapper">
+                           <img src="/images/dashboard-svgrepo-com.svg" class="svg-icon" alt="Dashboard">
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+
+
+
+                <a href="/operator/zones_control.html">
+                <span class="icon-wrapper">
+                    <img src="/images/hand-switch-svgrepo-com.svg" class="svg-icon" alt="Zone Switch">
+                </span>
+                <h3>Zones Control</h3>
+                </a>
+
+
+
+                <a href="/operator/feeders_control.html">
+                    <span class="icon-wrapper">
+                         <img src="/images/utility-pole.svg" class="svg-icon" alt="Feeders Switch">
+                    </span>
+                    <h3>Feeders Controls</h3>
+                </a>
+
+
+                <a href="/operator/zones.html" class="active">
+                    <span class="icon-wrapper">
+                           <img src="/images/area-icon.svg" class="svg-icon" alt="Zones Management">
+                    </span>
+                    <h3>Zones Management</h3>
+                </a>
+                <a href="/operator/feeders.html">
+                    <span class="icon-wrapper">
+                           <img src="/images/power-line.svg" class="svg-icon" alt="Feeders Management">
+                    </span>
+                    <h3>Feeders Management</h3>
+                </a>
+                <a href="/operator/devices.html">
+                    <span class="icon-wrapper">
+                        <img src="/images/wireless-device.svg" class="svg-icon" alt="Zone Switch">
+                    </span>
+                    <h3>Devices</h3>
+                </a>
+
+                <a href="#" id="logout-operator">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+<main>
+  <div class="recent-orders">
+    <h2>Zone Management</h2>
+
+    <!-- Relay Summary -->
+    <div class="relay-summary" style="margin-top: 10px; margin-bottom: 10px;">
+      <strong>Total Relays: <span id="totalRelays">0</span></strong> |
+      <strong>Used: <span id="usedRelays">0</span></strong> |
+      <strong>Free: <span id="freeRelays">0</span></strong>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="addZoneBtn" class="btn-primary">+ Add Zone</button>
+    </div>
+
+    <!-- Zone Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Zone Name</th>
+          <th>Status</th>
+          <th>Relays</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="zoneTableBody">
+        <!-- JS will populate -->
+      </tbody>
+    </table>
+
+    <a href="#">Show All</a>
+  </div>
+
+  <!-- Zone Modal -->
+  <div id="zoneModal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modalTitle">Add New Zone</h2>
+      <form id="zoneForm">
+        <label for="zoneName">Zone Name</label>
+        <input type="text" id="zoneName" name="zoneName" required />
+
+        <label>Assign Relays</label>
+        <div id="relaySelectContainer"></div>
+        <button type="button" id="addRelayBtn" class="btn-secondary">+ Add Relay</button>
+
+        <div class="modal-buttons">
+          <button type="submit" class="btn-primary">Save</button>
+          <button type="button" id="cancelBtn" class="btn-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b id="username"></b></p>
+                        <small class="text-muted">Oparator</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="../images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="/images/logo.png">
+                    <h2>EUB Power</h2>
+                    <p>Full Automatic Substation</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Add Reminder</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/zones.js"></script>
+    <script src="/js/dashboard_summary.js"></script>
+
+</body>
+
+</html>

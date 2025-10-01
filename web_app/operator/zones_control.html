@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Zone Controller</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="/images/logo.png">
+                    <h2 class="success">EUB<span class="danger">Power</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="/operator/operator_dashboard.html">
+                    <span class="icon-wrapper">
+                           <img src="/images/dashboard-svgrepo-com.svg" class="svg-icon" alt="Dashboard">
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+
+
+
+                <a href="/operator/zones_control.html" class="active">
+                <span class="icon-wrapper">
+                    <img src="/images/hand-switch-svgrepo-com.svg" class="svg-icon" alt="Zone Switch">
+                </span>
+                <h3>Zones Control</h3>
+                </a>
+
+
+
+                <a href="/operator/feeders_control.html">
+                    <span class="icon-wrapper">
+                         <img src="/images/utility-pole.svg" class="svg-icon" alt="Feeders Switch">
+                    </span>
+                    <h3>Feeders Controls</h3>
+                </a>
+
+
+                <a href="/operator/zones.html">
+                    <span class="icon-wrapper">
+                           <img src="/images/area-icon.svg" class="svg-icon" alt="Zones Management">
+                    </span>
+                    <h3>Zones Management</h3>
+                </a>
+                <a href="/operator/feeders.html">
+                    <span class="icon-wrapper">
+                           <img src="/images/power-line.svg" class="svg-icon" alt="Feeders Management">
+                    </span>
+                    <h3>Feeders Management</h3>
+                </a>
+                <a href="/operator/devices.html">
+                    <span class="icon-wrapper">
+                        <img src="/images/wireless-device.svg" class="svg-icon" alt="Zone Switch">
+                    </span>
+                    <h3>Devices</h3>
+                </a>
+
+                <a href="#" id="logout-operator">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+
+        <main>
+          <div class="recent-orders">
+            <h2>Zone Controller</h2>
+
+            <!-- Table -->
+            <table>
+              <thead>
+                <tr>
+                  <th>Zone Name</th>
+                  <th>Status</th>
+                  <th>Controller</th>
+                  <th>Switch</th>
+                  <th>Handover</th>
+                </tr>
+              </thead>
+              <tbody id="zoneControlTableBody">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+
+            <a href="#">Show All</a>
+          </div>
+
+          <!-- Zone Handover Modal -->
+          <div id="handoverModal" class="modal hidden">
+            <div class="modal-content">
+              <h2>Handover Zone Control</h2>
+              <form id="handoverForm">
+                <input type="hidden" id="handoverZoneId" />
+
+                <label for="linemanSelect">Select Line Man</label>
+                <select id="linemanSelect" class="input-select"></select>
+
+                <div class="modal-buttons">
+                  <button type="button" id="confirmHandover" class="btn-primary">Confirm</button>
+                  <button type="button" id="cancelHandoverBtn" class="btn-secondary">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b id="username"></b></p>
+                        <small class="text-muted">Oparator</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="../images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="/images/logo.png">
+                    <h2>EUB Power</h2>
+                    <p>Full Automatic Substation</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Add Reminder</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    <script>
+        fetch('/operator_header.html')
+            .then(response => response.text())
+            .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+
+            // Add logout event listener after header is loaded
+            document.getElementById('logoutBtn').addEventListener('click', () => {
+                localStorage.removeItem('token');
+                localStorage.removeItem('role');
+                window.location.href = '/operator/login_operator.html';
+            });
+
+            // Show username
+            const token = localStorage.getItem('token');
+            if (token) {
+                const payload = JSON.parse(atob(token.split('.')[1]));
+                const userEl = document.getElementById('username');
+                if (userEl) userEl.textContent = payload.username;
+            }
+            });
+    </script>
+
+
+    <script src="/js/index.js"></script>
+    <script src="/js/zones_control.js"></script>
+
+
+
+</body>
+
+</html>

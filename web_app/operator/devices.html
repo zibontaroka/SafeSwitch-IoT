@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Responsive Dashboard Design #1 | AsmrProg</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="/images/logo.png">
+                    <h2 class="success">EUB<span class="danger">Power</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="/operator/operator_dashboard.html">
+                    <span class="icon-wrapper">
+                           <img src="/images/dashboard-svgrepo-com.svg" class="svg-icon" alt="Dashboard">
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+
+
+
+                <a href="/operator/zones_control.html">
+                <span class="icon-wrapper">
+                    <img src="/images/hand-switch-svgrepo-com.svg" class="svg-icon" alt="Zone Switch">
+                </span>
+                <h3>Zones Control</h3>
+                </a>
+
+
+
+                <a href="/operator/feeders_control.html">
+                    <span class="icon-wrapper">
+                         <img src="/images/utility-pole.svg" class="svg-icon" alt="Feeders Switch">
+                    </span>
+                    <h3>Feeders Controls</h3>
+                </a>
+
+
+                <a href="/operator/zones.html">
+                    <span class="icon-wrapper">
+                           <img src="/images/area-icon.svg" class="svg-icon" alt="Zones Management">
+                    </span>
+                    <h3>Zones Management</h3>
+                </a>
+                <a href="/operator/feeders.html">
+                    <span class="icon-wrapper">
+                           <img src="/images/power-line.svg" class="svg-icon" alt="Feeders Management">
+                    </span>
+                    <h3>Feeders Management</h3>
+                </a>
+                <a href="/operator/devices.html" class="active">
+                    <span class="icon-wrapper">
+                        <img src="/images/wireless-device.svg" class="svg-icon" alt="Zone Switch">
+                    </span>
+                    <h3>Devices</h3>
+                </a>
+
+                <a href="#" id="logout-operator">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- New Users Section -->
+            <div class="recent-orders">
+                <h2>Device Status</h2>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Device ID</th>
+                      <th>Status</th>
+                      <th>Last Communication</th>
+                    </tr>
+                  </thead>
+                  <tbody id="deviceTableBody">
+                    <!-- Devices populated here -->
+                  </tbody>
+                </table>
+            </div>
+            <!-- End of New Users Section -->
+
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2>Relay Status</h2>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Relay UID</th>
+                      <th>Device ID</th>
+                      <th>GPIO Pin</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="relayTableBody">
+                    <!-- Relays populated here -->
+                  </tbody>
+                </table>
+            </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b id="username"></b></p>
+                        <small class="text-muted">Oparator</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/images/profile-1.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script src="../js/devices.js"></script>
+    <script src="../js/relay.js"></script>
+
+</body>
+
+</html>
