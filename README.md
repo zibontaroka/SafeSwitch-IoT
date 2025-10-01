@@ -56,7 +56,7 @@ Control is restored only after the Lineman safely revokes access via a **PIN-aut
 ### Operator Dashboard
 Centralized control center for system operators to monitor and manage power distribution network.
 
-![Operator Dashboard](photos/operator-dashboard.png)
+![Operator Dashboard](photos/Oparator-dashboard.JPG)
 
 **Key Functionalities:**
 - 📊 **Real-time Monitoring** - Live status of all feeders and zones
@@ -75,7 +75,7 @@ Centralized control center for system operators to monitor and manage power dist
 ### Lineman Dashboard
 Secure, PIN-protected interface for field technicians during maintenance operations.
 
-![Lineman Dashboard](photos/lineman-dashboard.png)
+![Lineman Dashboard](photos/lineman-dashboard.JPG)
 
 **Key Functionalities:**
 - 🔐 **PIN Authentication** - Secure access to assigned zones
