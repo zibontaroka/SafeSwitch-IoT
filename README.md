@@ -51,6 +51,57 @@ Control is restored only after the Lineman safely revokes access via a **PIN-aut
 
 ---
 
+## 🖥️ Web Application Interface
+
+### Operator Dashboard
+Centralized control center for system operators to monitor and manage power distribution network.
+
+![Operator Dashboard](photos/operator-dashboard.png)
+
+**Key Functionalities:**
+- 📊 **Real-time Monitoring** - Live status of all feeders and zones
+- 🔄 **Control Handover** - Safe delegation to linemen for maintenance
+- 🚨 **Emergency Override** - Critical situation management
+- 📈 **System Analytics** - Performance metrics and usage statistics
+- 👥 **User Management** - Lineman assignment and role management
+
+**Interface Components:**
+1. **Sidebar Navigation** - Quick access to different sections
+2. **Dashboard Overview** - System-wide status at a glance  
+3. **Feeder Control Panel** - Individual zone management
+4. **Handover History** - Audit trail of all control transfers
+5. **Alert System** - Real-time notifications and warnings
+
+### Lineman Dashboard
+Secure, PIN-protected interface for field technicians during maintenance operations.
+
+![Lineman Dashboard](photos/lineman-dashboard.png)
+
+**Key Functionalities:**
+- 🔐 **PIN Authentication** - Secure access to assigned zones
+- ⚡ **Relay Control** - Direct control over circuit breakers
+- 📱 **Mobile-Friendly** - Optimized for field use
+- 🔄 **Status Sync** - Real-time synchronization with backend
+- ✅ **Safety Lock** - Prevents accidental operations
+
+**Security Features:**
+- Session timeout after inactivity
+- PIN-based re-authentication required
+- Control limited to assigned zones only
+- Audit log of all operations
+- Emergency stop functionality
+
+### Workflow Demonstration
+**Control Handover Process:**
+1. Operator initiates handover from their dashboard
+2. Lineman receives notification and enters PIN
+3. Control transfers to lineman (operator access locked)
+4. Lineman performs maintenance operations
+5. Lineman revokes control after completion
+6. Operator regains full control automatically
+
+---
+
 ## 🔧 Hardware and PCB Design
 
 The **ESP8266 control module** manages up to **7 relays** for breaker/switch control.  
