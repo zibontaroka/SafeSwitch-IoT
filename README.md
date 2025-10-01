@@ -1,8 +1,4 @@
-
----
-
-```markdown
-# ⚡ A Secure IoT-Based Control Handover System for Power Line Maintenance
+# ⚡ SafeSwitch-IoT: A Secure IoT-Based Control Handover System for Power Line Maintenance
 
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js)](https://nodejs.org/)  
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)](https://www.postgresql.org/)  
@@ -75,6 +71,7 @@ It authenticates with the backend and executes Operator/Lineman commands securel
 
 ---
 
+
 ## 📂 File Structure
 ```
 
@@ -93,7 +90,7 @@ smart-power-handover-system/
 ├── js/          # Frontend JS logic
 └── images/      # UI assets/icons
 
-````
+```
 
 ---
 
@@ -104,30 +101,27 @@ smart-power-handover-system/
 - [PostgreSQL](https://www.postgresql.org/)  
 
 ### Installation
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/zibontaroka/SafeSwitch-IoT.git
    cd smart-power-handover-system/web_app/backend
-````
+   ```
 
 2. **Install dependencies:**
-
    ```bash
    npm install
    ```
 
 3. **Set up the database:**
-
-   * Create a PostgreSQL database.
-   * Import the backup:
-
+   - Create a PostgreSQL database
+   - Import the backup:
      ```bash
      psql -U your_user -d your_db -f ../../database/powergrid_backup.sql
      ```
 
 4. **Configure environment variables:**
-   Create `.env` in `web_app/backend/` with:
-
+   Create `.env` file in `web_app/backend/` directory with:
    ```env
    DB_USER=your_db_user
    DB_HOST=your_db_host
@@ -138,7 +132,6 @@ smart-power-handover-system/
    ```
 
 5. **Start the server:**
-
    ```bash
    npm start
    ```
@@ -177,4 +170,5 @@ This project currently has **no license**.
 
 ---
 
-```"# SafeSwitch-IoT" 
+
+"# SafeSwitch-IoT" 
